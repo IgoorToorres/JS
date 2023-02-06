@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            font-family: arial;
+        }
+
+        div#container {
+            background-image: linear-gradient(to bottom, blue, rgb(79, 134, 197));
+            height: 600px;
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        #txts {
+            text-align: center;
+        }
+
+        input.txt {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            display: inline-block;
+            margin-top: 100px;
+            text-align: center;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        #butao {
+            height: 42px;
+            width: 100px;
+            border-radius: 5px;
+            border: none;
+            display: block;
+            margin-top: 100px;
+            position: relative;
+            left: 40%;
+
+        }
+
+        p {
+            color: white;
+            font-size: 2em;
+            margin-top: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+
+        <h1>Somando Valores</h1>
+
+        <div id="txts">
+            <input type="number" placeholder="numero" id="txt1" class="txt">
+            <i class="material-symbols-outlined">add</i>
+            <input type="number" placeholder="numero" id="txt2" class="txt">
+        </div>
+
+        <input type="button" value="Somar" id="butao" onclick="clicar()">
+
+        <p id="resultado">resultado: </p>
+
+    </div>
+
+
+    <script>
+
+
+        function clicar() {
+            var tn1 = window.document.querySelector('#txt1')
+            var tn2 = window.document.querySelector('#txt2')
+            var res = window.document.querySelector('#resultado')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2
+            res.innerHTML = `a soma entre ${n1} + ${n2} = ${soma}`
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

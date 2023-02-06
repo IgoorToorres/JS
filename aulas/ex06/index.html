@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#caixa{
+            height: 300px;
+            width: 400px;
+            background-color: black;
+            color: white;
+            font-size: 2em;
+            line-height: 300px;
+            text-align: center;
+            border-radius: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: ease .3s;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">passe o mouse em mim</div>
+
+
+    <script>
+
+        var c = window.document.getElementById('caixa')
+        c.addEventListener("click", clicar)
+        c.addEventListener("mouseenter", mousedentro)
+        c.addEventListener("mouseout", mousefora)
+
+        function clicar(){
+            c.innerText = 'clicou, AMEM!'
+            c.style.background = 'green'
+        }
+        
+        function mousedentro(){
+            c.innerText = 'CLICAAA'
+            c.style.background = 'yellow'
+            c.style.color = 'black'
+        }
+
+        function mousefora(){
+            c.innerText = 'volta aqui diabo'
+            c.style.background = 'red'
+        }
+
+
+    </script>
+
+</body>
+</html>
