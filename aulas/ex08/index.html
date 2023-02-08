@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detran</title>
+    <style>
+
+        div#res{
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>testando limite de velocidade</h1>
+
+    <label for="veltxt">digite quantos Km/h voce passou pelo pardal</label>
+    <input type="number" id="veltxt">
+    <input type="submit" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+
+        function verificar(){
+            var velt = document.querySelector('#veltxt')
+            var vel = Number(velt.value)
+            var res = document.querySelector('#res')
+
+            res.innerHTML = `sua velocidade atual é de ${vel}Km/l`
+
+            if (vel > 80){
+                res.innerHTML += '<p>voce foi multado por excesso de velocidade</p>'
+            }
+
+            res.innerHTML += '<p>dirija com cuidado</p>'
+        }
+
+    </script>
+</body>
+</html>

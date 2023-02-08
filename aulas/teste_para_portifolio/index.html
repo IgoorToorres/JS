@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    
+    <script>
+
+        var msg = document.querySelector('#res')
+        var data = new Date()
+        var hora = data.getHours()
+        var dia = data.getDay()
+        switch (dia){
+            case 0:
+                var dia = 'Domingo'
+                break
+            case 1:
+                var dia = 'Segunda-Feira'
+                break
+            case 2: 
+                var dia = 'Terça-Feira'
+                break
+            case 3:
+                var dia = 'Quarta-Feira'
+                break 
+            case 4: 
+                var dia = 'Quinta-Feira'
+                break 
+            case 5:
+                var dia = 'Sexta-Feira'
+                break
+            case 6:
+                var dia = 'Sabado'
+                break
+            default:
+                var dia = '[ERRO]'
+                break
+        }
+
+        if (hora < 5){
+            var hora = 'Boa Madrugada!'
+        }else if (hora < 12){
+            var hora = 'Bom Dia!'
+        }else if (hora <  18){
+            var hora = 'Boa Tarde!'
+        }else{
+            var hora = 'Boa Noite'
+        }
+
+        if (dia == 'Sabado' || dia == 'Domingo'){
+            msg.innerHTML = `${hora} ótimo ${dia}`
+        }else{
+            msg.innerHTML = `${hora} ótima ${dia}`
+        }
+
+
+    </script>
+
+
+</body>
+</html>
