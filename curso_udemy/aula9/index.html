@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modelo</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <div class="texto">
+      <p>
+        <strong>IMC</strong> <br>
+        menos do que 18,75 <br>
+        entre 18,75 e 24,9 <br>
+        entre 25 e 29,9 <br>
+        entre 30 34,9 <br>
+        entre 35 39,9 <br>
+        mais do que 40 
+      </p>
+    </div>
+    <div class="texto" id="texto-2">
+      <p>
+        <strong>RESULTADO</strong> <br>
+        abaixo do peso <br>
+        peso normal <br>
+        sobrepeso <br>
+        obesidade grau1 <br>
+        obesidade grau2 <br>
+        obesidade grau3 
+      </p>
+    </div>
+
+    <form action="/" method="post" id="formulario">
+      <label for="peso">Peso</label>
+      <input type="text" id="peso">
+  
+      <label for="altura">Altura</label>
+      <input type="text" id="altura"> 
+  
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="resultado"></div>
+  </section>
+
+
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
